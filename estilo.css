@@ -90,15 +90,17 @@ nav li:hover{
 /*menu lateral*/
 
 /*Seções do meio da página (principais)*/
+
+
 #secaoPrincipal{
-	padding-top:10vh;	
 	background-color: #faeaff;
 }
 
-#secao-1, #secaoContato {
+#secao-1 {
 	display:flex;
 	flex-direction: column;
 	align-items:center;
+	
 }
 
 .principal{
@@ -106,8 +108,8 @@ nav li:hover{
 }
 
 .principal .container{
-	height:100%;
 	align-items:center;
+	height: 100%;
 }
 
 .container-imagem{
@@ -115,6 +117,8 @@ nav li:hover{
 	height: 600px;
 	width: 500px;
 	object-fit: cover;
+
+
 }
 .container-descricao{
 	width:550px;
@@ -254,6 +258,7 @@ footer{
 	border-top:#ffd522 3px solid;
 	width:100%;
 	height:60px;
+	
 }
 
 footer ul{
@@ -270,57 +275,47 @@ footer li{
 /*Rodapé*/
 
 /*Formulario do contato */
-#secaoContato .container{
 
-}
-
-.contato-titulo{
-	text-align:center;
+.conteiner-flex-contato{
+	display: flex;
+    flex-direction: column;
+	background-color: #fbdd32;
+	width: 80%;
+	align-items: center;
+	align-content: space-between;
+	justify-content: center;
+	margin-top: 600px;
 }
 
 .formulario-contato{
-background-color: #faeaff;
-padding:30px;
-width:50%;
-margin: 0 auto;
-border-radius: 10px;
-}
+background-color:#86359e;}
 
-form .input-container {
-	width: 80%;
-	margin: 10px auto;
-	color:rgb(0, 0, 0);
-	text-align:center;	
-}
-
-.input-container input{
-	width:100%;
-	height:30px;
-	border: 2px outset #ffd522;
-}
-label{
-	font-size: 20px;
-}
-
-textarea{
-	width:100%;
-	resize: none;
-	border: 2px outset #ffd522;
-}
-
-#botaoEnviar{
-	padding:20px;
-	width:60%;
-	color:white;
-	font-size: 24px;
-	background-color: #86359e;
-	border: 2px solid #ffd522;
-	line-height:3px;
-	cursor: pointer;
-}
-
-#botaoEnviar:hover{
-	background-color: #752e8a;
-
-}
 /*Formulario do contato */
+
+/*Sobre nos*/
+
+.container-sobre{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAEAFF;
+    width: 885px;
+    padding: 0px 25px;
+    border-radius: 25px;
+
+}
+
+.titulo-sobre{
+   text-align: center;
+   padding: 10px;
+   border-bottom: 2px solid #FFD522;
+}
+
+.conteudo-sobre{
+    padding: 40px 40px ;
+    text-align: justify;
+}
+
+.flex{
+	justify-content: center
+}
+
