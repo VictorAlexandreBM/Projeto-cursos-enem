@@ -3,16 +3,20 @@
 	padding:0;
 	margin:0;
 
-
+}
 /* usado em todas seções */
 .container{
-	margin-left:230px;
-	width:65%;
+	width:80%;
 }
 
 .flex {
 	display:flex;
 }
+
+@keyframes aparecer {
+	from {opacity: 0;}
+	to {opacity: 1;}
+  }
 /* usado em todas seções */
 
 body{
@@ -22,23 +26,30 @@ body{
 /* cabeçalho */
 header{
 	position:fixed;
+	left:0;
+	top:0;
 	width:100%;
 	background-color:#86359e;
 	border-bottom: #ffd522 3px solid;
 	padding:20px;
 	display:flex;
 	height:10vh;
+	justify-content: center;
+}
+
+header img{
+	height:100%;
+	cursor:pointer;
 }
 
 header .container{
+	justify-content: center;
 	align-items:center;
-	justify-content:center;
 }
 
 #containerLogo{
-		background-color: red; 
 		width: 60px;
-		height:50px;
+		height:9vh;
 }
 
 .container.flex.logo{
@@ -58,7 +69,6 @@ header .container{
 nav{
 	position: fixed;
 	top: 10vh;
-	left: 0px;
 	width: 200px;
 	height:90vh;
 }
@@ -82,32 +92,46 @@ nav li {
 	justify-content: space-between;
 	font-size: 20px;
 	cursor:pointer;
+	position:relative;
+	left: -140px;
+	transition: left 0.6s;
+
 }	
 
 nav li:hover{
+	left: 0px;
 	background-color:#faeaff;
 }
+
 /*menu lateral*/
 
 /*Seções do meio da página (principais)*/
-#secaoPrincipal{
-	padding-top:10vh;	
+#secaoPrincipal{	
+	min-height: 100vh;
 	background-color: #faeaff;
 }
 
-#secao-1, #secaoContato {
+#secao-1, #secao-2, #secaoContato {
 	display:flex;
 	flex-direction: column;
 	align-items:center;
+	justify-content: center;
+}
+
+#secao-1 .container{
+	animation-name: aparecer;
+	animation-duration: 1s;
 }
 
 .principal{
-	height:130vh;
+	min-height:100vh;
 }
 
 .principal .container{
 	height:100%;
 	align-items:center;
+	justify-content: center;
+	
 }
 
 .container-imagem{
@@ -115,6 +139,7 @@ nav li:hover{
 	height: 600px;
 	width: 500px;
 	object-fit: cover;
+
 }
 .container-descricao{
 	width:550px;
@@ -126,13 +151,13 @@ nav li:hover{
 	padding: 15px;
 	border-radius: 15px;
 	margin-top: 50px;
+
 }
 
 .titulo-propaganda{
 	font-size: 40px;
 	text-align: start;
 	color: azure;
-
 }
 
 .texto-propaganda{
@@ -150,11 +175,15 @@ nav li:hover{
     font-size: 20px;
     height: 44px;
     border-radius: 40px;
+	cursor:pointer;
+}
+
+.botao-propaganda:hover {
+	background-color:#772d8d;
 }
 
 .alternada {
 	background-color:#e9c8f3;
-	height:100vh;
 	width: 100%;
 }
 
@@ -233,8 +262,12 @@ nav li:hover{
     font-size: 20px;
     height: 44px;
     border-radius: 40px;
+	cursor: pointer;
 }
 
+.efetive-compra:hover {
+	background-color: hwb(45 22% 18%);
+}
 
 .fileira{
 	margin-top: 60px;
@@ -245,29 +278,6 @@ nav li:hover{
 	
 }
 /*Seção de compra de cursos*/
-
-/*Seções do meio da página (principais)*/
-
-/*Rodapé*/
-footer{
-	background-color:#86359e;
-	border-top:#ffd522 3px solid;
-	width:100%;
-	height:60px;
-}
-
-footer ul{
-	display:Flex;
-	list-style-type: none;
-	width:100%;
-	align-items: center;
-}
-
-footer li{
-	color:white;
-	margin: 20px 20px
-}
-/*Rodapé*/
 
 /*Formulario do contato */
 #secaoContato .container{
@@ -324,3 +334,58 @@ textarea{
 
 }
 /*Formulario do contato */
+
+/*Sobre nós */
+.container-sobre{
+    display: flex;
+    flex-direction: column;
+    background-color: #FAEAFF;
+    width: 885px;
+    padding: 0px 25px;
+    border-radius: 25px;
+}
+
+.titulo-sobre{
+	text-align: center;
+	padding: 10px;
+	border-bottom: 2px solid #FFD522;
+ }
+
+ .conteudo-sobre{
+    padding: 40px 40px ;
+    text-align: justify;
+}
+/*Sobre nós */
+
+/*Seções do meio da página (principais)*/
+
+/*Rodapé*/
+footer{
+	background-color:#86359e;
+	border-top:#ffd522 3px solid;
+	width:100%;
+	height:60px;
+	padding-top:20px;
+}
+
+footer ul{
+	display:Flex;
+	list-style-type: none;
+	width:100%;
+	align-items: center;
+}
+
+footer li{
+	color:white;
+	margin: 0 20px;
+	cursor:pointer;
+	height:100%;
+}
+footer li:hover{
+	color:#FFD522;	
+}
+footer .container{
+	margin:auto;
+}
+/*Rodapé*/
+
