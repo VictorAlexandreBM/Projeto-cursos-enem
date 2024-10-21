@@ -14,9 +14,10 @@
 }
 
 @keyframes aparecer {
-	from {opacity: 0;}
-	to {opacity: 1;}
+	from {opacity: 0; bottom: -60px}
+	to {opacity: 1; bottom: 0px;}
   }
+
 /* usado em todas seções */
 
 body{
@@ -35,6 +36,7 @@ header{
 	display:flex;
 	height:10vh;
 	justify-content: center;
+	z-index: 2;
 }
 
 header img{
@@ -121,6 +123,7 @@ nav li:hover{
 #secao-1 .container{
 	animation-name: aparecer;
 	animation-duration: 1s;
+	position:relative;
 }
 
 .principal{
@@ -139,7 +142,7 @@ nav li:hover{
 	height: 600px;
 	width: 500px;
 	object-fit: cover;
-
+	position:relative;
 }
 .container-descricao{
 	width:550px;
@@ -151,7 +154,9 @@ nav li:hover{
 	padding: 15px;
 	border-radius: 15px;
 	margin-top: 50px;
-
+	position: relative;
+	animation-name: surgir-abaixo;
+	animation-duration: 0.8s;
 }
 
 .titulo-propaganda{
@@ -202,8 +207,7 @@ nav li:hover{
     width: 250;
     align-items: center;
     gap: 20pxpx;
-	background-color: white;
-	
+	 background-color: white;
 }
 
 .imagem-container-oferta{
@@ -262,7 +266,7 @@ nav li:hover{
     font-size: 20px;
     height: 44px;
     border-radius: 40px;
-	cursor: pointer;
+	 cursor: pointer;
 }
 
 .efetive-compra:hover {
@@ -346,6 +350,7 @@ textarea{
     width: 885px;
     padding: 0px 25px;
     border-radius: 25px;
+	 position:relative;
 }
 
 .titulo-sobre{
