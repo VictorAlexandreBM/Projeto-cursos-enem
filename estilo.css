@@ -296,6 +296,9 @@ margin: 0 auto;
 border-radius: 10px;
 }
 
+.outros-contatos{
+	font-size: 18px;
+}
 form .input-container {
 	width: 80%;
 	margin: 10px auto;
@@ -364,8 +367,9 @@ footer{
 	background-color:#86359e;
 	border-top:#ffd522 3px solid;
 	width:100%;
-	height:60px;
-	padding-top:20px;
+	height:auto;
+	padding: 20px 0;
+	color:white;
 }
 
 footer ul{
@@ -375,13 +379,13 @@ footer ul{
 	align-items: center;
 }
 
-footer li{
-	color:white;
+.rodape-link{
+
 	margin: 0 20px;
 	cursor:pointer;
 	height:100%;
 }
-footer li:hover{
+.rodape-link:hover{
 	color:#FFD522;	
 }
 footer .container{
